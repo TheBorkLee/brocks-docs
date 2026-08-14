@@ -23,6 +23,13 @@ icon: "house"
   <Card title="BL Warehouse" icon="warehouse" href="/resources/bl-warehouse/overview">Warehouse robbery system for FiveM.</Card>
 </CardGroup>
 
+## Free Resources
+
+<CardGroup cols="2">
+  <Card title="BL Hairties" icon="scissors" href="/free/bl-hairties">Session-only hair ties with safe appearance restoration.</Card>
+  <Card title="BL Pedspawns" icon="users" href="/free/bl-pedspawns">Configurable ambient ped suppression zones.</Card>
+</CardGroup>
+
 ## Built for Server Owners
 
 Whether you are launching a resource for the first time or maintaining a live server, these docs keep the path from download to gameplay clear.

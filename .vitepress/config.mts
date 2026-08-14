@@ -27,6 +27,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Resources', link: '/resources/bl-warehouse/overview' },
+      { text: 'Free', link: '/free/bl-hairties' },
       { text: 'Store', link: 'https://brocks-scripts-peds.tebex.io' },
       { text: 'Discord', link: 'https://discord.gg/QdEPrhkFRm' }
     ],
@@ -57,6 +58,14 @@ export default defineConfig({
               { text: 'Troubleshooting', link: '/resources/bl-warehouse/troubleshooting' }
             ]
           }
+        ]
+      },
+      {
+        text: 'Free Resources',
+        collapsed: false,
+        items: [
+          { text: 'BL Hairties', link: '/free/bl-hairties' },
+          { text: 'BL Pedspawns', link: '/free/bl-pedspawns' }
         ]
       },
       {
