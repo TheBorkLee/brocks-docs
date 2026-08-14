@@ -31,7 +31,7 @@ Do not install a dependency based only on an example elsewhere in these docs. Us
 
 ## Quick links
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card title="Installation" icon="download" href="/resources/bl-warehouse/installation">Install and verify the resource.</Card>
   <Card title="Configuration" icon="sliders-horizontal" href="/resources/bl-warehouse/configuration">Prepare the included configuration.</Card>
   <Card title="Items & Rewards" icon="package" href="/resources/bl-warehouse/items-and-rewards">Plan inventory and reward setup.</Card>

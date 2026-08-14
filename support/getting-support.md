@@ -27,7 +27,7 @@ Never post license keys, Tebex transaction information, server credentials, data
 
 ## Support links
 
-<CardGroup cols={2}>
+<CardGroup cols="2">
   <Card title="Discord Support" icon="message-circle" href="https://example.com/discord">[ADD DISCORD SUPPORT URL]</Card>
   <Card title="Tebex Store" icon="shopping-bag" href="https://example.com/tebex">[ADD TEBEX STORE URL]</Card>
 </CardGroup>

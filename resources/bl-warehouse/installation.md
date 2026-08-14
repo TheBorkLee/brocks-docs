@@ -61,7 +61,7 @@ If no SQL file is included, do not create tables or import SQL based on guesses.
 
 Add the resource after its confirmed dependencies:
 
-```cfg
+```ini
 ensure bl_warehouse
 ```
 

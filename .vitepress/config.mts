@@ -1,0 +1,102 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'Brocks Scripts',
+  description: 'Installation, configuration, integration, and support documentation for Brocks Scripts FiveM resources.',
+  base: '/brocks-docs/',
+  lang: 'en-US',
+  cleanUrls: true,
+  appearance: 'dark',
+  lastUpdated: true,
+  srcExclude: ['README.md'],
+  sitemap: {
+    hostname: 'https://theborklee.github.io/brocks-docs/'
+  },
+  head: [
+    ['meta', { name: 'theme-color', content: '#8b5cf6' }],
+    ['meta', { property: 'og:site_name', content: 'Brocks Scripts' }]
+  ],
+  themeConfig: {
+    siteTitle: 'Brocks Scripts',
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true
+      }
+    },
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Resources', link: '/resources/bl-warehouse/overview' },
+      { text: 'Store', link: 'https://example.com/tebex' },
+      { text: 'Discord', link: 'https://example.com/discord' }
+    ],
+    sidebar: [
+      {
+        text: 'Getting Started',
+        collapsed: false,
+        items: [
+          { text: 'Introduction', link: '/getting-started/introduction' },
+          { text: 'Getting Started', link: '/getting-started/getting-started' },
+          { text: 'Common Installation', link: '/getting-started/common-installation' }
+        ]
+      },
+      {
+        text: 'Resources',
+        collapsed: false,
+        items: [
+          {
+            text: 'BL Warehouse',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/resources/bl-warehouse/overview' },
+              { text: 'Installation', link: '/resources/bl-warehouse/installation' },
+              { text: 'Configuration', link: '/resources/bl-warehouse/configuration' },
+              { text: 'Items & Rewards', link: '/resources/bl-warehouse/items-and-rewards' },
+              { text: 'Framework Setup', link: '/resources/bl-warehouse/framework-setup' },
+              { text: 'Full Config', link: '/resources/bl-warehouse/full-config' },
+              { text: 'Troubleshooting', link: '/resources/bl-warehouse/troubleshooting' }
+            ]
+          },
+          { text: 'Future Resources', link: '/resources/future-resources' }
+        ]
+      },
+      {
+        text: 'Developers',
+        collapsed: false,
+        items: [
+          { text: 'Exports', link: '/developers/exports' },
+          { text: 'Events', link: '/developers/events' },
+          { text: 'Integration Guide', link: '/developers/integration-guide' }
+        ]
+      },
+      {
+        text: 'Support',
+        collapsed: false,
+        items: [
+          { text: 'Common Issues', link: '/support/common-issues' },
+          { text: 'Getting Support', link: '/support/getting-support' },
+          { text: 'FAQ', link: '/support/faq' }
+        ]
+      }
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/TheBorkLee/brocks-docs' }
+    ],
+    editLink: {
+      pattern: 'https://github.com/TheBorkLee/brocks-docs/edit/main/:path',
+      text: 'Edit this page on GitHub'
+    },
+    outline: {
+      level: [2, 3],
+      label: 'On this page'
+    },
+    docFooter: {
+      prev: 'Previous page',
+      next: 'Next page'
+    },
+    footer: {
+      message: 'Brocks Scripts documentation',
+      copyright: 'Built for FiveM server owners.'
+    }
+  }
+})
