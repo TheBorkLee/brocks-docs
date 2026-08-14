@@ -16,7 +16,7 @@ brocks-docs/
 ├── .vitepress/
 │   ├── config.mts                     # Branding, navigation, sidebar, and base path
 │   └── theme/
-│       ├── components/                # Cards, callouts, steps, and Snake game
+│       ├── components/                # Cards, callouts, steps, and animated backdrop
 │       ├── custom.css                 # Dark Brocks Scripts theme
 │       └── index.ts                   # Custom component registration
 ├── developers/                        # Exports, events, and integration guides
@@ -163,21 +163,21 @@ Edit `.vitepress/config.mts` to change:
 - GitHub repository links
 - GitHub Pages base path
 
-The Store and Discord links currently use these placeholders:
+The Store and Discord links are configured as:
 
 ```text
-https://example.com/tebex
-https://example.com/discord
+https://brocks-scripts-peds.tebex.io
+https://discord.gg/QdEPrhkFRm
 ```
 
-Replace both before a public launch. The dark theme and purple design tokens are in `.vitepress/theme/custom.css`.
+Update these in `.vitepress/config.mts` and `support/getting-support.md` if either destination changes. The dark theme and purple design tokens are in `.vitepress/theme/custom.css`.
 
 ## Safe publishing checklist
 
 - Confirm documentation against the current released resource files.
 - Keep the BL Warehouse placeholders until details are verified.
-- Replace Store and Discord placeholder URLs.
+- Confirm the Store and Discord URLs are current.
 - Never commit license keys, Tebex transaction data, credentials, database passwords, `.env` files, paid source archives, or private server data.
 - Run `npm.cmd run docs:build`.
-- Test changed pages and the homepage Snake game locally.
+- Test changed pages and the animated site background locally.
 - Check the GitHub Actions run after pushing to `main`.

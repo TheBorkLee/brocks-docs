@@ -1,32 +1,47 @@
 ---
 title: "BL Warehouse"
-description: "Overview and quick links for the BL Warehouse FiveM resource."
+description: "Overview, requirements, compatibility, and quick links for BL Warehouse 1.1.0."
 icon: "warehouse"
 ---
 
 # BL Warehouse
 
-BL Warehouse is a warehouse robbery system for FiveM. This section provides the documentation foundation for installing, configuring, and supporting the resource without assuming unconfirmed implementation details.
+BL Warehouse is an instanced warehouse robbery for Qbox servers. Players obtain a warehouse location, breach a randomized entrance, fight networked guards, search crates, and escape with configurable rewards.
+
+**Documented version:** `1.1.0`
 
 ## Features
 
-- Configurable warehouse robbery experience
-- Designed for FiveM roleplay servers
-- Configurable gameplay
-- Server-owner configuration options
+- Ten randomized warehouse entrances
+- Instanced interior using OneSync routing buckets
+- Server-created networked security guards
+- Randomized searchable crates and configurable loot tables
+- Configurable police requirement, global cooldown, robbery timer, start item, guards, rewards, and messages
+- Server-authoritative entry, distance, routing bucket, item, loot, and duplicate-loot validation
+- Optional NPC dialog and police dispatch integrations
+- Cleanup on completion, timeout, disconnect, resource stop, and restart
 
 ## Compatibility
 
-Supported frameworks, inventories, targeting systems, and other integrations must be confirmed against the installed release.
+BL Warehouse 1.1.0 is built for:
 
-**Confirmed compatibility:** `[ADD CONFIRMED COMPATIBILITY HERE]`
+- Qbox through `qbx_core`
+- `ox_inventory`
+- `ox_target`
+- `ox_lib`
+
+Other frameworks, inventory systems, and targeting systems are not supported out of the box. The optional `dialog` and `daybreak-police` integrations are not required for the robbery to run.
 
 ## Requirements
 
-`[ADD REQUIRED DEPENDENCIES HERE]`
+- `qbx_core`
+- `ox_lib`
+- `ox_target`
+- `ox_inventory`
+- OneSync enabled
 
 <Warning>
-Do not install a dependency based only on an example elsewhere in these docs. Use the requirements included with your version of BL Warehouse.
+Start all four required resources before `bl-warehouse`. Use current versions compatible with your Qbox server.
 </Warning>
 
 ## Quick links

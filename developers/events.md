@@ -10,10 +10,10 @@ This page documents public events provided by Brocks Scripts resources.
 
 ## BL Warehouse
 
-No events have been documented yet.
+BL Warehouse 1.1.0 does not expose any network events as a supported public integration API. Its registered events are internal implementation details and are intentionally not documented for third-party triggering.
 
 <Warning>
-Do not trigger or listen for an event until it is listed here and confirmed for your installed resource version.
+Do not trigger internal BL Warehouse events from another resource. Their names, parameters, validation, and behavior can change between releases.
 </Warning>
 
 When events are added, each entry will document:
@@ -24,18 +24,3 @@ When events are added, each entry will document:
 - Behavior
 - Example
 - Version introduced or changed
-
-## Entry template
-
-`[ADD VERIFIED EVENT NAME HERE]`
-
-| Field | Details |
-| --- | --- |
-| Context | `[CLIENT OR SERVER]` |
-| Direction | `[LISTENED FOR OR TRIGGERED]` |
-| Parameters | `[ADD PARAMETERS]` |
-| Version | `[ADD RESOURCE VERSION]` |
-
-```lua
--- ADD A VERIFIED USAGE EXAMPLE HERE
-```

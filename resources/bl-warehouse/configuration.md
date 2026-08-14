@@ -1,59 +1,110 @@
 ---
 title: "Configuration"
-description: "A safe workflow for configuring BL Warehouse."
+description: "Configure BL Warehouse 1.1.0 across its shared, client, and server settings."
 icon: "sliders-horizontal"
 ---
 
 # Configuration
 
-## Configuration Overview
+BL Warehouse keeps its editable settings in three open configuration files. Restart `bl-warehouse` after making changes.
 
-Open the configuration files included with your installed release and work through them in order. Make one focused change at a time, keep a backup, and test on a development server.
+| File | Controls |
+| --- | --- |
+| `shared/cfg_shared.lua` | Exterior warehouse entrances shared by the client and server |
+| `shared/cfg_client.lua` | Visuals, targets, props, interior, guard combat behavior, UI, and dispatch toggle |
+| `shared/cfg_server.lua` | Timers, police requirement, start item, rewards, guard definitions, routing buckets, and dispatch details |
 
 <Warning>
-Configuration options shown in examples may differ from the installed version of BL Warehouse. Always reference the config files included with the resource.
+This reference matches BL Warehouse `1.1.0`. Compare the version in `fxmanifest.lua` with this page before applying settings to a different release.
 </Warning>
-
-The following is a **generic example of formatting only**. Its keys are not claimed to exist in BL Warehouse:
-
-```lua
--- EXAMPLE ONLY — not a BL Warehouse configuration reference
-ExampleConfig = {
-    enabled = true,
-    exampleValue = 10
-}
-```
 
 ## General Settings
 
-Review the supplied config for global behavior and locale-related options. `[DOCUMENT CONFIRMED GENERAL SETTINGS HERE]`
+The main server gameplay settings are at the top of `shared/cfg_server.lua`.
+
+| Setting | Unit | Default | Purpose |
+| --- | --- | --- | --- |
+| `cooldown` | Seconds | `30 * 60` | Delay before another robbery can begin |
+| `robberyTime` | Seconds | `5 * 60` | Maximum duration before the active robbery ends |
+| `guardSpawnDelay` | Milliseconds | `1500` | Delay before guard network IDs are sent to entering players |
+| `deadGuardCleanupDelay` | Milliseconds | `10 * 60 * 1000` | Delay before dead guard entities are removed |
+| `routingBucketBase` | Number | `5000` | Base range used to generate robbery routing buckets |
+| `interactionDistance` | Game units | `5.0` | Maximum server-side distance for exterior and guard interactions |
+
+Choose a `routingBucketBase` range that does not overlap another instanced resource on your server.
 
 ## Framework
 
-Select only an integration confirmed as supported by your installed version. `[ADD CONFIRMED FRAMEWORK OPTION AND VALUES HERE]`
+Version 1.1.0 uses Qbox through `qbx_core`. There is no framework selector in the config. QBCore and ESX are not supported out of the box.
+
+See [Framework Setup](/resources/bl-warehouse/framework-setup) for the verified start order.
 
 ## Interactions
 
-Document the supported interaction or targeting integration here after verification. `[ADD CONFIRMED INTERACTION SETTINGS HERE]`
+`ox_target` settings are in `shared/cfg_client.lua`:
+
+- `guards.lootTarget` controls the guard-search target, distance, progress circle, and animation.
+- `locations.warehouseExit` controls the interior exit target box.
+- `lootBoxes.target` controls the crate-search target, distance, progress UI, and animation.
+
+Target names should remain unique across your server. Animation dictionaries and clips must be valid GTA V values.
 
 ## Police Requirements
 
-If the release provides police-related controls, document the exact job identifiers, counts, and behavior from the current config. `[ADD CONFIRMED POLICE SETTINGS HERE]`
+Configure the `police` table in `shared/cfg_server.lua`:
+
+```lua
+police = {
+    jobs = { 'police', 'sasp', 'bcso' },
+    amount = 2,
+    message = 'Not enough police on duty'
+}
+```
+
+`jobs` contains Qbox job names counted as law enforcement. `amount` is the total number of on-duty officers required across those jobs; use `0` to disable the requirement.
 
 ## Cooldowns
 
-Confirm the unit used by any cooldown value—seconds, minutes, or milliseconds—before changing it. `[ADD CONFIRMED COOLDOWN SETTINGS HERE]`
+`cooldown` and `robberyTime` are expressed in seconds:
+
+```lua
+cooldown = 30 * 60,  -- 30 minutes
+robberyTime = 5 * 60, -- 5 minutes
+```
+
+The cooldown is global. Only one warehouse robbery can be active at a time.
 
 ## Locations
 
-Copy the existing location format from the included config. Preserve commas, braces, coordinate types, and required fields. `[ADD CONFIRMED LOCATION SCHEMA HERE]`
+- Add or remove exterior `vec3` entrance coordinates in `shared/cfg_shared.lua`.
+- `locations.warehouseInside` in the client and server configs must refer to the same interior position.
+- `warehouseProps.locations` contains the possible crate prop positions and headings.
+- `boxLoot.locationCount` must equal the number of entries in `warehouseProps.locations`.
+- `locations.jobStartLoc` in `shared/cfg_server.lua` positions the robbery contact NPC.
+
+<Warning>
+An incorrect `boxLoot.locationCount` can generate invalid loot indexes. Count the configured prop locations after adding or removing entries.
+</Warning>
 
 ## Rewards
 
-Configure only item names, amounts, chances, or other reward fields that exist in the released config. See [Items & Rewards](/resources/bl-warehouse/items-and-rewards).
+Server-authoritative rewards are configured in `guardLoot.items` and `boxLoot.items` inside `shared/cfg_server.lua`. Each entry uses:
+
+| Field | Meaning |
+| --- | --- |
+| `name` | Exact `ox_inventory` item name |
+| `minAmount` | Minimum quantity awarded when the roll succeeds |
+| `maxAmount` | Maximum quantity awarded when the roll succeeds |
+| `chance` | Independent percentage chance from `0` to `100` |
+
+Multiple crate rewards can be issued because each item rolls independently. See [Items & Rewards](/resources/bl-warehouse/items-and-rewards) for the included defaults.
+
+## Dispatch
+
+Set `dispatch.enabled = false` in `shared/cfg_client.lua` to disable alerts. The `dispatch` table in `shared/cfg_server.lua` configures the optional `daybreak-police` resource name, alert text, jobs, blip, duration, and priority.
+
+The robbery continues normally when `daybreak-police` is not running. Supporting another dispatch resource requires a compatible adapter or a code change before escrow upload.
 
 ## Debugging
 
-Use a debug setting only if the installed config provides one. Disable it again on production unless the resource instructions say otherwise. `[ADD CONFIRMED DEBUG OPTION HERE]`
-
-After every change, save the file, restart the resource, and check both the server console and F8 console for syntax or runtime errors.
+BL Warehouse 1.1.0 does not define a debug toggle in its current configuration files. Use the server console, F8 console, and temporary development values for testing. Restart `bl-warehouse` after every configuration change and restore production values when verification is complete.

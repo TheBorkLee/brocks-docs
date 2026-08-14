@@ -21,7 +21,6 @@ icon: "house"
 
 <CardGroup cols="2">
   <Card title="BL Warehouse" icon="warehouse" href="/resources/bl-warehouse/overview">Warehouse robbery system for FiveM.</Card>
-  <Card title="More Resources Coming Soon" icon="sparkles" href="/resources/future-resources">This documentation is ready to grow with the Brocks Scripts catalog.</Card>
 </CardGroup>
 
 ## Built for Server Owners
@@ -35,5 +34,3 @@ Whether you are launching a resource for the first time or maintaining a live se
   <Card title="Troubleshooting" icon="wrench">Focused checks for common FiveM issues.</Card>
   <Card title="Updates and support" icon="refresh-cw">A clear route to current documentation and help.</Card>
 </CardGroup>
-
-<SnakeGame />

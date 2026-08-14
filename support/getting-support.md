@@ -28,13 +28,9 @@ Never post license keys, Tebex transaction information, server credentials, data
 ## Support links
 
 <CardGroup cols="2">
-  <Card title="Discord Support" icon="message-circle" href="https://example.com/discord">[ADD DISCORD SUPPORT URL]</Card>
-  <Card title="Tebex Store" icon="shopping-bag" href="https://example.com/tebex">[ADD TEBEX STORE URL]</Card>
+  <Card title="Discord Support" icon="message-circle" href="https://discord.gg/QdEPrhkFRm">Join the Brocks Scripts Discord server.</Card>
+  <Card title="Tebex Store" icon="shopping-bag" href="https://brocks-scripts-peds.tebex.io">Browse Brocks Scripts resources on Tebex.</Card>
 </CardGroup>
-
-<Note>
-The links above are placeholders. Replace them in `docs.json` and this page before publishing.
-</Note>
 
 ## Copyable request template
 

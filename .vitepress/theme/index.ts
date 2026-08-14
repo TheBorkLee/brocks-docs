@@ -6,7 +6,7 @@ import DocCard from './components/DocCard.vue'
 import Steps from './components/Steps.vue'
 import Step from './components/Step.vue'
 import Callout from './components/Callout.vue'
-import SnakeGame from './components/SnakeGame.vue'
+import AmbientBackdrop from './components/AmbientBackdrop.vue'
 import './custom.css'
 
 const callout = (type: 'note' | 'warning' | 'tip', title: string) =>
@@ -19,6 +19,9 @@ const callout = (type: 'note' | 'warning' | 'tip', title: string) =>
 
 export default {
   extends: DefaultTheme,
+  Layout: () => h(DefaultTheme.Layout, null, {
+    'layout-top': () => h(AmbientBackdrop)
+  }),
   enhanceApp({ app }) {
     app.component('CardGroup', CardGroup)
     app.component('Card', DocCard)
@@ -27,6 +30,5 @@ export default {
     app.component('Note', callout('note', 'Note'))
     app.component('Warning', callout('warning', 'Warning'))
     app.component('Tip', callout('tip', 'Tip'))
-    app.component('SnakeGame', SnakeGame)
   }
 } satisfies Theme

@@ -1,40 +1,67 @@
 ---
 title: "Framework Setup"
-description: "Prepared integration sections for Qbox, QBCore, and ESX."
+description: "Verified Qbox framework setup and unsupported framework status for BL Warehouse 1.1.0."
 icon: "plug"
 ---
 
 # Framework Setup
 
-<Warning>
-Supported frameworks must be confirmed against the current BL Warehouse release before publishing implementation instructions. The sections below are placeholders, not compatibility claims.
-</Warning>
+BL Warehouse 1.1.0 is built for Qbox. It does not contain a framework selector or built-in bridge for QBCore or ESX.
 
 ## Qbox
 
-**Support status:** `[CONFIRM QBOX SUPPORT]`
+**Support status:** Supported
 
-`[ADD VERIFIED QBOX DEPENDENCIES, CONFIG VALUES, START ORDER, AND TEST STEPS HERE]`
+Required resources:
+
+- `qbx_core`
+- `ox_lib`
+- `ox_target`
+- `ox_inventory`
+- OneSync enabled
+
+Use this start order:
+
+```ini
+ensure ox_lib
+ensure qbx_core
+ensure ox_target
+ensure ox_inventory
+ensure bl-warehouse
+```
+
+Qbox job names used for the police requirement are configured in `police.jobs` inside `shared/cfg_server.lua`. The defaults are `police`, `sasp`, and `bcso`.
 
 ## QBCore
 
-**Support status:** `[CONFIRM QBCORE SUPPORT]`
+**Support status:** Not supported out of the box
 
-`[ADD VERIFIED QBCORE DEPENDENCIES, CONFIG VALUES, START ORDER, AND TEST STEPS HERE]`
+BL Warehouse 1.1.0 calls Qbox functionality through `qbx_core` and expects its player and job behavior. Installing `qb-core` alone is not a supported setup.
 
 ## ESX
 
-**Support status:** `[CONFIRM ESX SUPPORT]`
+**Support status:** Not supported out of the box
 
-`[ADD VERIFIED ESX DEPENDENCIES, CONFIG VALUES, START ORDER, AND TEST STEPS HERE]`
+There is no ESX adapter or config option in version 1.1.0.
 
-## Verification checklist
+<Warning>
+Changing the framework, inventory, or target integration requires custom development and is outside the standard installation documented here.
+</Warning>
 
-Once an integration is confirmed:
+## Optional Integrations
 
-- Record the supported framework version.
-- Document the exact configuration value.
-- List required bridge or library resources.
-- Show the correct `server.cfg` start order.
-- Verify player, job, notification, and inventory behavior where applicable.
-- Test with a clean server console and F8 console.
+| Resource | Status | Behavior |
+| --- | --- | --- |
+| `dialog` | Optional | Provides the NPC conversation; ox_lib context is used as a fallback |
+| `daybreak-police` | Optional | Receives dispatch calls when dispatch is enabled |
+
+Neither optional resource is included. The robbery remains usable without them.
+
+## Verification Checklist
+
+- Confirm OneSync is enabled.
+- Confirm all four required resources start before `bl-warehouse`.
+- Verify `warehouse_blueprints` and every reward item exist in `ox_inventory`.
+- Temporarily set `police.amount = 0` on a development server.
+- Start and complete a robbery while checking the server and F8 consoles.
+- Restore production police, timer, and cooldown values afterward.

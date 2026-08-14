@@ -27,8 +27,8 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Resources', link: '/resources/bl-warehouse/overview' },
-      { text: 'Store', link: 'https://example.com/tebex' },
-      { text: 'Discord', link: 'https://example.com/discord' }
+      { text: 'Store', link: 'https://brocks-scripts-peds.tebex.io' },
+      { text: 'Discord', link: 'https://discord.gg/QdEPrhkFRm' }
     ],
     sidebar: [
       {
@@ -56,8 +56,7 @@ export default defineConfig({
               { text: 'Full Config', link: '/resources/bl-warehouse/full-config' },
               { text: 'Troubleshooting', link: '/resources/bl-warehouse/troubleshooting' }
             ]
-          },
-          { text: 'Future Resources', link: '/resources/future-resources' }
+          }
         ]
       },
       {

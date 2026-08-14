@@ -10,10 +10,10 @@ This page documents public exports provided by Brocks Scripts resources.
 
 ## BL Warehouse
 
-No exports have been documented yet.
+BL Warehouse 1.1.0 does not provide a public export API.
 
 <Warning>
-Do not depend on an export until it is listed here and confirmed for your installed resource version.
+Do not call internal resource behavior as though it were a supported export. Public integrations will be versioned and documented here if they are added later.
 </Warning>
 
 When exports are added, each entry will document:
@@ -24,18 +24,3 @@ When exports are added, each entry will document:
 - Return Value
 - Example
 - Version introduced or changed
-
-## Entry template
-
-`[ADD VERIFIED EXPORT NAME HERE]`
-
-| Field | Details |
-| --- | --- |
-| Context | `[CLIENT OR SERVER]` |
-| Parameters | `[ADD PARAMETERS]` |
-| Returns | `[ADD RETURN VALUE]` |
-| Version | `[ADD RESOURCE VERSION]` |
-
-```lua
--- ADD A VERIFIED USAGE EXAMPLE HERE
-```

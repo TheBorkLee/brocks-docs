@@ -10,16 +10,16 @@ These checks address common FiveM setup problems and do not imply that BL Wareho
 
 ## Resource Doesn't Start
 
-1. Check the server console for the first `bl_warehouse` error.
-2. Verify the folder is named `bl_warehouse` and contains `fxmanifest.lua` at its root.
-3. Confirm `ensure bl_warehouse` exists in `server.cfg`.
+1. Check the server console for the first `bl-warehouse` error.
+2. Verify the folder is named `bl-warehouse` and contains `fxmanifest.lua` at its root.
+3. Confirm `ensure bl-warehouse` exists in `server.cfg`.
 4. Verify the resource start order and restart the server.
 
 ## Missing Dependency
 
-- Compare installed dependencies with the files or instructions included in your release.
+- Confirm `qbx_core`, `ox_lib`, `ox_target`, and `ox_inventory` are installed and current.
 - Confirm every dependency folder name and version.
-- Start dependencies before `bl_warehouse`.
+- Start all four dependencies before `bl-warehouse`.
 - Resolve the first missing export or resource error shown in the console.
 
 ## Script Error
@@ -31,7 +31,7 @@ These checks address common FiveM setup problems and do not imply that BL Wareho
 
 ## Interaction Not Appearing
 
-- Confirm any configured interaction integration is running.
+- Confirm `ox_target` is running before `bl-warehouse`.
 - Review both consoles for errors.
 - Verify the relevant configuration and location data against the included files.
 - Test with the correct player state or job only if the release documents such requirements.
@@ -39,7 +39,7 @@ These checks address common FiveM setup problems and do not imply that BL Wareho
 ## Items Not Working
 
 - Confirm exact item names exist in the configured inventory.
-- Verify the inventory starts before BL Warehouse.
+- Verify `ox_inventory` starts before BL Warehouse.
 - Check inventory registration files for syntax errors.
 - Review [Items & Rewards](/resources/bl-warehouse/items-and-rewards).
 
