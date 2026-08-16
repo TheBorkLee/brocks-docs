@@ -166,7 +166,7 @@ Edit `.vitepress/config.mts` to change:
 The Store and Discord links are configured as:
 
 ```text
-https://brocks-scripts-peds.tebex.io
+https://brocksscripts.tebex.io
 https://discord.gg/QdEPrhkFRm
 ```
 

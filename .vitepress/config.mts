@@ -29,7 +29,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Resources', link: '/resources/bl_warehouse/overview' },
       { text: 'Free', link: '/free/bl-hairties' },
-      { text: 'Store', link: 'https://brocks-scripts-peds.tebex.io' },
+      { text: 'Store', link: 'https://brocksscripts.tebex.io' },
       { text: 'Discord', link: 'https://discord.gg/QdEPrhkFRm' }
     ],
     sidebar: [
