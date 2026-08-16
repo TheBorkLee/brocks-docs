@@ -14,7 +14,8 @@ export default defineConfig({
   },
   head: [
     ['meta', { name: 'theme-color', content: '#07090d' }],
-    ['meta', { property: 'og:site_name', content: 'Brocks Scripts' }]
+    ['meta', { property: 'og:site_name', content: 'Brocks Scripts' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/brocks-docs/brocks-development-logo.png' }]
   ],
   themeConfig: {
     siteTitle: 'Brocks Scripts',
@@ -103,8 +104,8 @@ export default defineConfig({
       next: 'Next page'
     },
     footer: {
-      message: 'Brocks Scripts documentation',
-      copyright: 'Built for FiveM server owners.'
+      message: 'Brocks Development documentation',
+      copyright: 'Building today. Creating tomorrow.'
     }
   }
 })

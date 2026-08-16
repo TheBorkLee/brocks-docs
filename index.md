@@ -5,9 +5,13 @@ icon: "house"
 ---
 
 <div class="brocks-hero">
-  <p class="eyebrow">Brocks Scripts</p>
-  <h1>Documentation built to help you get your resources running quickly.</h1>
-  <p class="lede">Practical guides for installing, configuring, integrating, and troubleshooting Brocks Scripts resources.</p>
+  <div class="brocks-hero-copy">
+    <p class="eyebrow">Brocks Development</p>
+    <h1>Documentation built to move your server forward.</h1>
+    <p class="lede">Practical guides for installing, configuring, integrating, and troubleshooting Brocks Scripts resources.</p>
+    <p class="brocks-motto">Building today. Creating tomorrow.</p>
+  </div>
+  <img class="brocks-hero-logo" src="/brocks-development-logo.png" alt="Brocks Development logo" />
 </div>
 
 <CardGroup cols="2">

@@ -510,19 +510,19 @@ a.doc-card:hover {
 
 /* Brocks Signal theme ----------------------------------------------------- */
 :root {
-  --brocks-mint: #55f5c2;
-  --brocks-cyan: #58c9ff;
+  --brocks-mint: #656bd6;
+  --brocks-cyan: #9196ff;
   --brocks-violet: #a78bfa;
   --brocks-ink: #07090d;
   --brocks-panel: rgba(13, 17, 24, 0.78);
-  --brocks-line: rgba(85, 245, 194, 0.18);
-  --vp-c-brand-1: #2dd4a7;
-  --vp-c-brand-2: #55f5c2;
-  --vp-c-brand-3: #18a984;
-  --vp-c-brand-soft: rgba(85, 245, 194, 0.13);
-  --vp-button-brand-bg: #1eb991;
-  --vp-button-brand-hover-bg: #2dd4a7;
-  --vp-home-hero-name-background: linear-gradient(108deg, #ffffff 0%, #55f5c2 42%, #58c9ff 70%, #a78bfa 100%);
+  --brocks-line: rgba(101, 107, 214, 0.18);
+  --vp-c-brand-1: #5d63cc;
+  --vp-c-brand-2: #656bd6;
+  --vp-c-brand-3: #474ca8;
+  --vp-c-brand-soft: rgba(101, 107, 214, 0.13);
+  --vp-button-brand-bg: #5157b9;
+  --vp-button-brand-hover-bg: #5d63cc;
+  --vp-home-hero-name-background: linear-gradient(108deg, #ffffff 0%, #656bd6 42%, #9196ff 70%, #a78bfa 100%);
 }
 
 .dark {
@@ -537,12 +537,12 @@ a.doc-card:hover {
 
 body {
   background-image:
-    radial-gradient(circle at 82% -10%, rgba(85, 245, 194, 0.09), transparent 30rem),
+    radial-gradient(circle at 82% -10%, rgba(101, 107, 214, 0.09), transparent 30rem),
     radial-gradient(circle at 12% 42%, rgba(88, 201, 255, 0.05), transparent 32rem);
 }
 
 ::selection {
-  background: rgba(85, 245, 194, 0.28);
+  background: rgba(101, 107, 214, 0.28);
   color: #fff;
 }
 
@@ -551,7 +551,7 @@ body {
 }
 
 .VPNavBar {
-  border-bottom: 1px solid rgba(85, 245, 194, 0.11);
+  border-bottom: 1px solid rgba(101, 107, 214, 0.11);
   background: rgba(7, 9, 13, 0.68) !important;
   backdrop-filter: blur(18px) saturate(145%);
 }
@@ -562,7 +562,7 @@ body {
   margin-right: 10px;
   border-radius: 2px;
   background: var(--brocks-mint);
-  box-shadow: 0 0 16px rgba(85, 245, 194, 0.85);
+  box-shadow: 0 0 16px rgba(101, 107, 214, 0.85);
   content: '';
   transform: rotate(45deg);
 }
@@ -584,7 +584,7 @@ body {
 
 .VPSidebarItem.is-active > .item .link > .text {
   color: var(--brocks-mint) !important;
-  text-shadow: 0 0 18px rgba(85, 245, 194, 0.25);
+  text-shadow: 0 0 18px rgba(101, 107, 214, 0.25);
 }
 
 .vp-doc h1 {
@@ -601,12 +601,12 @@ body {
   width: min(180px, 42%);
   height: 3px;
   background: linear-gradient(90deg, var(--brocks-mint), var(--brocks-cyan), transparent);
-  box-shadow: 0 0 14px rgba(85, 245, 194, 0.25);
+  box-shadow: 0 0 14px rgba(101, 107, 214, 0.25);
   content: '';
 }
 
 .vp-doc h2 {
-  border-top: 1px solid rgba(85, 245, 194, 0.12);
+  border-top: 1px solid rgba(101, 107, 214, 0.12);
 }
 
 .vp-doc h2::before {
@@ -620,20 +620,50 @@ body {
 }
 
 .vp-doc a:not(.doc-card) {
-  text-decoration-color: rgba(85, 245, 194, 0.35);
+  text-decoration-color: rgba(101, 107, 214, 0.35);
   text-underline-offset: 3px;
 }
 
 .brocks-hero {
-  border-color: rgba(85, 245, 194, 0.28);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 32%);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  border-color: rgba(101, 107, 214, 0.28);
   border-radius: 4px 28px 4px 28px;
   background:
-    linear-gradient(90deg, rgba(85, 245, 194, 0.055) 1px, transparent 1px),
-    linear-gradient(rgba(85, 245, 194, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(101, 107, 214, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(101, 107, 214, 0.055) 1px, transparent 1px),
     radial-gradient(circle at 82% 18%, rgba(88, 201, 255, 0.17), transparent 32%),
     linear-gradient(132deg, rgba(17, 26, 35, 0.96), rgba(7, 9, 13, 0.96) 62%);
   background-size: 34px 34px, 34px 34px, auto, auto;
   box-shadow: 0 34px 100px rgba(0, 0, 0, 0.42), inset 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.brocks-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.brocks-hero-logo {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 280px);
+  margin-inline: auto;
+  border: 1px solid rgba(145, 150, 255, 0.16);
+  border-radius: 3px 22px 3px 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.42), 0 0 45px rgba(101, 107, 214, 0.13);
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.brocks-motto {
+  margin: 1.45rem 0 0;
+  color: rgba(255, 255, 255, 0.52);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 .brocks-hero::before {
@@ -643,7 +673,7 @@ body {
   width: 38%;
   height: 2px;
   background: linear-gradient(90deg, var(--brocks-mint), var(--brocks-cyan), transparent);
-  box-shadow: 0 0 18px rgba(85, 245, 194, 0.55);
+  box-shadow: 0 0 18px rgba(101, 107, 214, 0.55);
   content: '';
 }
 
@@ -684,8 +714,8 @@ body {
 }
 
 a.doc-card:hover {
-  border-color: rgba(85, 245, 194, 0.48);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3), 0 0 26px rgba(85, 245, 194, 0.06);
+  border-color: rgba(101, 107, 214, 0.48);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3), 0 0 26px rgba(101, 107, 214, 0.06);
   transform: translateY(-3px);
 }
 
@@ -695,41 +725,41 @@ a.doc-card:hover::after {
 }
 
 .doc-card-icon {
-  border-color: rgba(85, 245, 194, 0.26);
+  border-color: rgba(101, 107, 214, 0.26);
   border-radius: 4px 9px 4px 9px;
-  background: rgba(85, 245, 194, 0.08);
+  background: rgba(101, 107, 214, 0.08);
   color: var(--brocks-mint);
 }
 
 .brocks-callout {
-  border-color: rgba(85, 245, 194, 0.22);
+  border-color: rgba(101, 107, 214, 0.22);
   border-left-color: var(--brocks-mint);
   border-radius: 3px 14px 3px 14px;
-  background: linear-gradient(90deg, rgba(85, 245, 194, 0.1), rgba(13, 17, 24, 0.72));
+  background: linear-gradient(90deg, rgba(101, 107, 214, 0.1), rgba(13, 17, 24, 0.72));
 }
 
 .doc-step-marker {
   background: var(--brocks-mint);
-  box-shadow: 0 0 0 2px rgba(85, 245, 194, 0.26), 0 0 16px rgba(85, 245, 194, 0.4);
+  box-shadow: 0 0 0 2px rgba(101, 107, 214, 0.26), 0 0 16px rgba(101, 107, 214, 0.4);
 }
 
 .doc-step:not(:last-child)::before {
-  background: linear-gradient(var(--brocks-mint), rgba(85, 245, 194, 0.08));
+  background: linear-gradient(var(--brocks-mint), rgba(101, 107, 214, 0.08));
 }
 
 .vp-doc div[class*='language-'] {
-  border-color: rgba(85, 245, 194, 0.15);
+  border-color: rgba(101, 107, 214, 0.15);
   border-radius: 3px 14px 3px 14px;
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.26);
 }
 
 .vp-doc table {
-  border: 1px solid rgba(85, 245, 194, 0.12);
+  border: 1px solid rgba(101, 107, 214, 0.12);
   border-radius: 3px 12px 3px 12px;
 }
 
 .vp-doc th {
-  background: rgba(85, 245, 194, 0.075);
+  background: rgba(101, 107, 214, 0.075);
   color: var(--brocks-mint);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -741,11 +771,11 @@ a.doc-card:hover::after {
 }
 
 .ambient-orb-one {
-  background: #16a77d;
+  background: #4c52b5;
 }
 
 .ambient-orb-two {
-  background: #187fc0;
+  background: #363c91;
 }
 
 .ambient-orb-three {
@@ -754,8 +784,8 @@ a.doc-card:hover::after {
 
 .ambient-grid {
   background-image:
-    linear-gradient(rgba(85, 245, 194, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(85, 245, 194, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(101, 107, 214, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(101, 107, 214, 0.025) 1px, transparent 1px);
 }
 
 .ambient-scan {
@@ -769,7 +799,17 @@ a.doc-card:hover::after {
 
 @media (max-width: 640px) {
   .brocks-hero {
+    grid-template-columns: 1fr;
     border-radius: 3px 18px 3px 18px;
+  }
+
+  .brocks-hero-logo {
+    width: min(76%, 230px);
+    grid-row: 1;
+  }
+
+  .brocks-motto {
+    letter-spacing: 0.15em;
   }
 
   .vp-doc h2::before {
