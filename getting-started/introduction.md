@@ -12,7 +12,7 @@ Brocks Scripts creates premium resources for FiveM servers. This documentation i
 
 <CardGroup cols="2">
   <Card title="New installation" icon="rocket" href="/getting-started/getting-started">Start with the setup checklist.</Card>
-  <Card title="BL Warehouse" icon="warehouse" href="/resources/bl-warehouse/overview">Open the resource documentation.</Card>
+  <Card title="BL Warehouse" icon="warehouse" href="/resources/bl_warehouse/overview">Open the resource documentation.</Card>
   <Card title="Developer references" icon="code-2" href="/developers/integration-guide">Plan a custom integration.</Card>
   <Card title="Need help?" icon="life-buoy" href="/support/getting-support">Prepare a useful support request.</Card>
 </CardGroup>

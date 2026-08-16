@@ -28,4 +28,4 @@ Make sure you edited the active resource copy, saved the file, and restarted the
 
 ## Still stuck?
 
-Use the [BL Warehouse troubleshooting guide](/resources/bl-warehouse/troubleshooting) for resource setup checks or prepare a complete [support request](/support/getting-support).
+Use the [BL Warehouse troubleshooting guide](/resources/bl_warehouse/troubleshooting) for resource setup checks or prepare a complete [support request](/support/getting-support).

@@ -6,7 +6,7 @@ icon: "package"
 
 # Items & Rewards
 
-BL Warehouse 1.1.0 uses `ox_inventory`. The required start item and every configured reward must exist in `ox_inventory/data/items.lua`.
+BL Warehouse 1.2.0 uses `ox_inventory`. The required start item and every configured reward must exist in `ox_inventory/data/items.lua`.
 
 ## Adding the Required Item
 
@@ -40,11 +40,11 @@ Set `removeOnUse` to `false` if the item should not be consumed when a robbery b
 2. Add `warehouse_blueprints` to `ox_inventory/data/items.lua`.
 3. Confirm each configured reward exists in the same inventory item registry.
 4. Check the item file for commas, braces, and duplicate keys.
-5. Start `ox_inventory` before `bl-warehouse`, then reconnect and test.
+5. Start `ox_inventory` before `bl_warehouse`, then reconnect and test.
 
 ## Default Rewards
 
-The version 1.1.0 config contains these defaults:
+The version 1.2.0 config contains these defaults:
 
 | Source | Item | Amount | Chance |
 | --- | --- | --- | --- |
@@ -83,13 +83,13 @@ Before adding a custom reward:
 2. Confirm its exact internal name and capitalization.
 3. Add its image or metadata following the ox_inventory item format used by your server.
 4. Add the reward entry to `guardLoot.items` or `boxLoot.items`.
-5. Restart `ox_inventory` and `bl-warehouse`, then test on a development server.
+5. Restart `ox_inventory` and `bl_warehouse`, then test on a development server.
 
 ## Troubleshooting Missing Items
 
 - Check the server and F8 consoles for inventory errors.
 - Verify spelling and capitalization in the item registry and reward config.
-- Confirm `ox_inventory` starts before `bl-warehouse`.
+- Confirm `ox_inventory` starts before `bl_warehouse`.
 - Check for duplicate or malformed item definitions.
 - Reconnect after restarting the affected resources.
 - Confirm the player has enough inventory capacity for the configured reward.

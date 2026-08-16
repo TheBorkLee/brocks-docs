@@ -10,16 +10,17 @@ These checks address common FiveM setup problems and do not imply that BL Wareho
 
 ## Resource Doesn't Start
 
-1. Check the server console for the first `bl-warehouse` error.
-2. Verify the folder is named `bl-warehouse` and contains `fxmanifest.lua` at its root.
-3. Confirm `ensure bl-warehouse` exists in `server.cfg`.
+1. Check the server console for the first `bl_warehouse` error.
+2. Verify the folder is named `bl_warehouse` and contains `fxmanifest.lua` at its root.
+3. Confirm `ensure bl_warehouse` exists in `server.cfg`.
 4. Verify the resource start order and restart the server.
 
 ## Missing Dependency
 
-- Confirm `qbx_core`, `ox_lib`, `ox_target`, and `ox_inventory` are installed and current.
+- Confirm the selected framework resource (`qbx_core`, `qb-core`, or `es_extended`), `ox_lib`, `ox_target`, and `ox_inventory` are installed and current.
+- Confirm `framework` in `shared/cfg_server.lua` is set to the matching value: `qbox`, `qbcore`, or `esx`.
 - Confirm every dependency folder name and version.
-- Start all four dependencies before `bl-warehouse`.
+- Start all four dependencies before `bl_warehouse`.
 - Resolve the first missing export or resource error shown in the console.
 
 ## Script Error
@@ -31,7 +32,7 @@ These checks address common FiveM setup problems and do not imply that BL Wareho
 
 ## Interaction Not Appearing
 
-- Confirm `ox_target` is running before `bl-warehouse`.
+- Confirm `ox_target` is running before `bl_warehouse`.
 - Review both consoles for errors.
 - Verify the relevant configuration and location data against the included files.
 - Test with the correct player state or job only if the release documents such requirements.
@@ -41,7 +42,7 @@ These checks address common FiveM setup problems and do not imply that BL Wareho
 - Confirm exact item names exist in the configured inventory.
 - Verify `ox_inventory` starts before BL Warehouse.
 - Check inventory registration files for syntax errors.
-- Review [Items & Rewards](/resources/bl-warehouse/items-and-rewards).
+- Review [Items & Rewards](/resources/bl_warehouse/items-and-rewards).
 
 ## Database Errors
 

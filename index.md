@@ -11,16 +11,16 @@ icon: "house"
 </div>
 
 <CardGroup cols="2">
-  <Card title="Browse Resources" icon="boxes" href="/resources/bl-warehouse/overview">Explore every documented resource.</Card>
+  <Card title="Browse Resources" icon="boxes" href="/resources/bl_warehouse/overview">Explore every documented resource.</Card>
   <Card title="Installation" icon="download" href="/getting-started/common-installation">Follow a reliable installation workflow.</Card>
-  <Card title="Configuration" icon="sliders-horizontal" href="/resources/bl-warehouse/configuration">Learn how to approach resource settings.</Card>
+  <Card title="Configuration" icon="sliders-horizontal" href="/resources/bl_warehouse/configuration">Learn how to approach resource settings.</Card>
   <Card title="Get Support" icon="life-buoy" href="/support/getting-support">Prepare the details needed for faster help.</Card>
 </CardGroup>
 
 ## Popular Resources
 
 <CardGroup cols="2">
-  <Card title="BL Warehouse" icon="warehouse" href="/resources/bl-warehouse/overview">Warehouse robbery system for FiveM.</Card>
+  <Card title="BL Warehouse" icon="warehouse" href="/resources/bl_warehouse/overview">Warehouse robbery system for FiveM.</Card>
 </CardGroup>
 
 ## Free Resources

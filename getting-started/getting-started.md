@@ -33,5 +33,5 @@ Never expose license keys, transaction details, credentials, or database passwor
 ## Next steps
 
 - Read the [common installation guide](/getting-started/common-installation).
-- Browse [BL Warehouse](/resources/bl-warehouse/overview).
+- Browse [BL Warehouse](/resources/bl_warehouse/overview).
 - Learn [how to get support](/support/getting-support).

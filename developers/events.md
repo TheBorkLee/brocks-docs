@@ -10,7 +10,7 @@ This page documents public events provided by Brocks Scripts resources.
 
 ## BL Warehouse
 
-BL Warehouse 1.1.0 does not expose any network events as a supported public integration API. Its registered events are internal implementation details and are intentionally not documented for third-party triggering.
+BL Warehouse 1.2.0 does not expose any network events as a supported public integration API. Its registered events are internal implementation details and are intentionally not documented for third-party triggering.
 
 <Warning>
 Do not trigger internal BL Warehouse events from another resource. Their names, parameters, validation, and behavior can change between releases.

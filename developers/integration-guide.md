@@ -17,23 +17,25 @@ Use this process when connecting a Brocks Scripts resource to a framework, inven
   <Step title="Test both sides">Inspect server and F8 consoles, then test the complete player flow affected by the integration.</Step>
 </Steps>
 
-## BL Warehouse 1.1.0 integration status
+## BL Warehouse 1.2.0 integration status
 
 | Integration | Status | Notes |
 | --- | --- | --- |
-| Qbox (`qbx_core`) | Required | Framework integration |
+| Qbox (`qbx_core`) | Supported | Select with `framework = 'qbox'` |
+| QBCore (`qb-core`) | Supported | Select with `framework = 'qbcore'` |
+| ESX (`es_extended`) | Supported | Select with `framework = 'esx'` |
 | `ox_lib` | Required | Library, notifications, and fallback context UI |
 | `ox_target` | Required | Player interactions |
 | `ox_inventory` | Required | Start item, capacity checks, and rewards |
 | OneSync | Required | Networked guards and routing bucket isolation |
 | `dialog` | Optional | NPC conversation; ox_lib context is the fallback |
-| `daybreak-police` | Optional | Dispatch through its `AddCall` export |
+| Dispatch resource | Optional | Configure its server export or event in the dispatch adapter |
 
-BL Warehouse does not provide public [exports](/developers/exports) or [events](/developers/events) in version 1.1.0.
+BL Warehouse does not provide public [exports](/developers/exports) or [events](/developers/events) in version 1.2.0.
 
 ## Dispatch adapters
 
-Set `dispatch.enabled = false` in `shared/cfg_client.lua` when dispatch is not wanted. The included optional integration targets `daybreak-police`. Supporting a different dispatch system requires adapting the `AddCall` integration before escrow upload or providing a compatible adapter resource.
+Set `dispatch.enabled = false` in `shared/cfg_client.lua` when dispatch is not wanted. To enable it, configure the dispatch resource and its server-side export or event in the `dispatch` adapter in `shared/cfg_server.lua`.
 
 ## Requesting a new integration
 

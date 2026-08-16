@@ -12,15 +12,15 @@ Begin with [Getting Started](/getting-started/getting-started), then open the in
 
 ## What does BL Warehouse require?
 
-Version 1.1.0 requires Qbox through `qbx_core`, `ox_lib`, `ox_target`, `ox_inventory`, and OneSync. See the complete [requirements](/resources/bl-warehouse/overview#requirements).
+Version 1.2.0 requires Qbox (`qbx_core`), QBCore (`qb-core`), or ESX (`es_extended`), plus `ox_lib`, `ox_target`, `ox_inventory`, and OneSync. See the complete [requirements](/resources/bl_warehouse/overview#requirements).
 
 ## Does BL Warehouse support my framework or inventory?
 
-BL Warehouse 1.1.0 supports Qbox, ox_inventory, and ox_target. QBCore, ESX, and alternative inventory or target resources are not supported out of the box. See [Framework Setup](/resources/bl-warehouse/framework-setup).
+BL Warehouse 1.2.0 supports Qbox, QBCore, and ESX. Alternative inventory or target resources are not supported out of the box. See [Framework Setup](/resources/bl_warehouse/framework-setup).
 
 ## Do I need to import SQL?
 
-No. BL Warehouse 1.1.0 does not include or require SQL. Register its items in `ox_inventory/data/items.lua` instead.
+No. BL Warehouse 1.2.0 does not include or require SQL. Register its items in `ox_inventory/data/items.lua` instead.
 
 ## Why did my config change not apply?
 
