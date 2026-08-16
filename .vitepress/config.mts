@@ -13,7 +13,7 @@ export default defineConfig({
     hostname: 'https://theborklee.github.io/brocks-docs/'
   },
   head: [
-    ['meta', { name: 'theme-color', content: '#8b5cf6' }],
+    ['meta', { name: 'theme-color', content: '#07090d' }],
     ['meta', { property: 'og:site_name', content: 'Brocks Scripts' }]
   ],
   themeConfig: {

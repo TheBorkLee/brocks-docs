@@ -101,9 +101,70 @@ Multiple crate rewards can be issued because each item rolls independently. See 
 
 ## Dispatch
 
-Set `dispatch.enabled = false` in `shared/cfg_client.lua` to disable alerts. The `dispatch` table in `shared/cfg_server.lua` configures the optional `daybreak-police` resource name, alert text, jobs, blip, duration, and priority.
+Set `dispatch.enabled = false` in `shared/cfg_client.lua` to disable alerts. To enable alerts, open the `dispatch` table in `shared/cfg_server.lua`, set `resource` to the exact folder name of your dispatch resource, and replace the `send` function with the server export or event shown in that dispatch resource's documentation.
 
-The robbery continues normally when `daybreak-police` is not running. Supporting another dispatch resource requires a compatible adapter or a code change before escrow upload.
+### Adding a server export
+
+If your dispatch provides a server-side export, call it inside `send`. Replace the resource name, export name, and fields with the exact API supplied by your dispatch:
+
+```lua
+dispatch = {
+    resource = 'your-dispatch',
+    title = 'Security Alert',
+    code = '10-90',
+    message = 'Security alarm triggered at a warehouse.',
+    jobs = { 'police', 'sasp' },
+    sprite = 473,
+    color = 1,
+    scale = 1.2,
+    length = 2,
+    priority = 1,
+    send = function(data)
+        exports['your-dispatch']:YourServerExport({
+            coords = data.coords,
+            title = data.title,
+            code = data.code,
+            message = data.message,
+            jobs = data.jobs,
+            blip = data.blip,
+        })
+    end,
+}
+```
+
+Do not copy `YourServerExport` literally. It is a placeholder for the export documented by your dispatch resource. Some dispatches accept the complete `data` table instead:
+
+```lua
+send = function(data)
+    exports['your-dispatch']:AddCall(data)
+end,
+```
+
+### Adding an event
+
+For a server event, trigger the documented event from the same function:
+
+```lua
+send = function(data)
+    TriggerEvent('your-dispatch:server:createAlert', data)
+end,
+```
+
+If the dispatch API only works on the client, relay the alert to the player who triggered it. `data.source` contains that player's server ID:
+
+```lua
+send = function(data)
+    TriggerClientEvent('your-dispatch:client:createAlert', data.source, data)
+end,
+```
+
+The adapter provides `source`, `coords`, `title`, `code`, `message`, `jobs`, `blip`, `length`, and `priority`. Your dispatch may use different field names or require a different table structure, so map these values to its documented payload rather than guessing.
+
+<Warning>
+The `send` function runs on the server. Do not paste a client-only export into it. Use the client-event relay example when your dispatch has no server API.
+</Warning>
+
+Start the configured dispatch before `bl_warehouse` when `resource` is set. Set `resource = nil` if no startup check is needed. Adapter errors print in the server console without interrupting the robbery.
 
 ## Debugging
 
