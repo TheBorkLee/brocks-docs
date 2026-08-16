@@ -29,7 +29,7 @@ Never post license keys, Tebex transaction information, server credentials, data
 
 <CardGroup cols="2">
   <Card title="Discord Support" icon="message-circle" href="https://discord.gg/QdEPrhkFRm">Join the Brocks Scripts Discord server.</Card>
-  <Card title="Tebex Store" icon="shopping-bag" href="https://brocks-scripts-peds.tebex.io">Browse Brocks Scripts resources on Tebex.</Card>
+  <Card title="Tebex Store" icon="shopping-bag" href="https://brocksscripts.tebex.io">Browse Brocks Scripts resources on Tebex.</Card>
 </CardGroup>
 
 ## Copyable request template
