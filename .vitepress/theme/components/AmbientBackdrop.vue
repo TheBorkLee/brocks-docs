@@ -6,5 +6,6 @@
     <span class="ambient-streak ambient-streak-one" />
     <span class="ambient-streak ambient-streak-two" />
     <span class="ambient-grid" />
+    <span class="ambient-scan" />
   </div>
 </template>
