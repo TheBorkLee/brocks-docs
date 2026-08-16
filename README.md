@@ -22,7 +22,7 @@ brocks-docs/
 ├── developers/                        # Exports, events, and integration guides
 ├── getting-started/                   # General onboarding guides
 ├── resources/
-│   └── bl-warehouse/                  # Complete BL Warehouse documentation section
+│   └── bl_warehouse/                  # Complete BL Warehouse documentation section
 ├── support/                            # Common issues, support, and FAQ
 ├── index.md                            # Homepage
 ├── package.json                        # Commands and dependencies
@@ -139,7 +139,7 @@ After that, check the repository's **Actions** tab for deployment progress. The 
 
 ## Add a new resource section
 
-Copy the organizational pattern—not the technical claims—from `resources/bl-warehouse`:
+Copy the organizational pattern—not the technical claims—from `resources/bl_warehouse`:
 
 ```text
 resources/

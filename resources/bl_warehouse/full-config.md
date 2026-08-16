@@ -1,15 +1,15 @@
 ---
 title: "Full Config"
-description: "Configuration reference for BL Warehouse version 1.1.0."
+description: "Configuration reference for BL Warehouse version 1.2.0."
 icon: "file-code-2"
 ---
 
 # Full Config Reference
 
-This reference mirrors the editable configuration structure shipped with BL Warehouse `1.1.0`. The installed config files remain the source of truth for their exact values and comments.
+This reference mirrors the editable configuration structure shipped with BL Warehouse `1.2.0`. The installed config files remain the source of truth for their exact values and comments.
 
 <Note>
-Restart `bl-warehouse` after changing any configuration file. Back up customized files before installing an update.
+Restart `bl_warehouse` after changing any configuration file. Back up customized files before installing an update.
 </Note>
 
 ## Configuration Files
@@ -36,7 +36,7 @@ Settings in `shared/cfg_server.lua`:
 
 ## Framework
 
-There is no framework config key. Version 1.1.0 requires `qbx_core`, `ox_lib`, `ox_target`, and `ox_inventory`. OneSync must be enabled.
+Set `framework` to `qbox`, `qbcore`, or `esx`. Version 1.2.0 requires the matching framework resource, plus `ox_lib`, `ox_target`, and `ox_inventory`. OneSync must be enabled.
 
 ## Start Item
 
@@ -59,7 +59,7 @@ There is no framework config key. Version 1.1.0 requires `qbx_core`, `ox_lib`, `
 | `warehouseProps.locations` | Client config | All possible crate prop positions and headings |
 | `boxLoot.locationCount` | Server config | Number of client prop locations available for random selection |
 
-Keep the client and server warehouse interior coordinates synchronized. `boxLoot.locationCount` must equal the number of entries in `warehouseProps.locations`; version 1.1.0 includes `21`.
+Keep the client and server warehouse interior coordinates synchronized. `boxLoot.locationCount` must equal the number of entries in `warehouseProps.locations`; version 1.2.0 includes `21`.
 
 ## Police
 
@@ -100,7 +100,7 @@ The cooldown is global, and the resource prevents overlapping robberies.
 | `netWait` / `netTries` | `100` / `50` | Guard network wait interval and attempts |
 | `lootTarget` | Table | Guard-search target, progress circle, and animation |
 
-Server-created guard entries in `shared/cfg_server.lua` define each guard's model, `vec4` coordinates, health, armour, weapon, and ammo. Version 1.1.0 ships with three guards.
+Server-created guard entries in `shared/cfg_server.lua` define each guard's model, `vec4` coordinates, health, armour, weapon, and ammo. Version 1.2.0 ships with three guards.
 
 ## Props and Crates
 
@@ -120,7 +120,7 @@ Server-created guard entries in `shared/cfg_server.lua` define each guard's mode
 | `maxAmount` | Maximum reward quantity |
 | `chance` | Independent percentage chance from `0` to `100` |
 
-Version 1.1.0 defaults:
+Version 1.2.0 defaults:
 
 - Guards: `black_money`, `250`–`750`, `100%`
 - Crates: `black_money`, `100`–`500`, `100%`
@@ -144,4 +144,4 @@ Dispatch is optional. The robbery continues if the configured dispatch resource 
 
 ## Debug
 
-Version 1.1.0 has no debug config key. Test with temporary police, cooldown, and timer values on a development server while monitoring the server and F8 consoles.
+Version 1.2.0 has no debug config key. Test with temporary police, cooldown, and timer values on a development server while monitoring the server and F8 consoles.

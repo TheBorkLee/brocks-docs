@@ -26,7 +26,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Resources', link: '/resources/bl-warehouse/overview' },
+      { text: 'Resources', link: '/resources/bl_warehouse/overview' },
       { text: 'Free', link: '/free/bl-hairties' },
       { text: 'Store', link: 'https://brocks-scripts-peds.tebex.io' },
       { text: 'Discord', link: 'https://discord.gg/QdEPrhkFRm' }
@@ -49,13 +49,13 @@ export default defineConfig({
             text: 'BL Warehouse',
             collapsed: false,
             items: [
-              { text: 'Overview', link: '/resources/bl-warehouse/overview' },
-              { text: 'Installation', link: '/resources/bl-warehouse/installation' },
-              { text: 'Configuration', link: '/resources/bl-warehouse/configuration' },
-              { text: 'Items & Rewards', link: '/resources/bl-warehouse/items-and-rewards' },
-              { text: 'Framework Setup', link: '/resources/bl-warehouse/framework-setup' },
-              { text: 'Full Config', link: '/resources/bl-warehouse/full-config' },
-              { text: 'Troubleshooting', link: '/resources/bl-warehouse/troubleshooting' }
+              { text: 'Overview', link: '/resources/bl_warehouse/overview' },
+              { text: 'Installation', link: '/resources/bl_warehouse/installation' },
+              { text: 'Configuration', link: '/resources/bl_warehouse/configuration' },
+              { text: 'Items & Rewards', link: '/resources/bl_warehouse/items-and-rewards' },
+              { text: 'Framework Setup', link: '/resources/bl_warehouse/framework-setup' },
+              { text: 'Full Config', link: '/resources/bl_warehouse/full-config' },
+              { text: 'Troubleshooting', link: '/resources/bl_warehouse/troubleshooting' }
             ]
           }
         ]

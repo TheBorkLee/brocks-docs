@@ -1,12 +1,12 @@
 ---
 title: "Configuration"
-description: "Configure BL Warehouse 1.1.0 across its shared, client, and server settings."
+description: "Configure BL Warehouse 1.2.0 across its shared, client, and server settings."
 icon: "sliders-horizontal"
 ---
 
 # Configuration
 
-BL Warehouse keeps its editable settings in three open configuration files. Restart `bl-warehouse` after making changes.
+BL Warehouse keeps its editable settings in three open configuration files. Restart `bl_warehouse` after making changes.
 
 | File | Controls |
 | --- | --- |
@@ -15,7 +15,7 @@ BL Warehouse keeps its editable settings in three open configuration files. Rest
 | `shared/cfg_server.lua` | Timers, police requirement, start item, rewards, guard definitions, routing buckets, and dispatch details |
 
 <Warning>
-This reference matches BL Warehouse `1.1.0`. Compare the version in `fxmanifest.lua` with this page before applying settings to a different release.
+This reference matches BL Warehouse `1.2.0`. Compare the version in `fxmanifest.lua` with this page before applying settings to a different release.
 </Warning>
 
 ## General Settings
@@ -35,9 +35,9 @@ Choose a `routingBucketBase` range that does not overlap another instanced resou
 
 ## Framework
 
-Version 1.1.0 uses Qbox through `qbx_core`. There is no framework selector in the config. QBCore and ESX are not supported out of the box.
+Version 1.2.0 uses the `framework` setting in `shared/cfg_server.lua`. Supported values are `qbox`, `qbcore`, and `esx`.
 
-See [Framework Setup](/resources/bl-warehouse/framework-setup) for the verified start order.
+See [Framework Setup](/resources/bl_warehouse/framework-setup) for the verified start order.
 
 ## Interactions
 
@@ -97,7 +97,7 @@ Server-authoritative rewards are configured in `guardLoot.items` and `boxLoot.it
 | `maxAmount` | Maximum quantity awarded when the roll succeeds |
 | `chance` | Independent percentage chance from `0` to `100` |
 
-Multiple crate rewards can be issued because each item rolls independently. See [Items & Rewards](/resources/bl-warehouse/items-and-rewards) for the included defaults.
+Multiple crate rewards can be issued because each item rolls independently. See [Items & Rewards](/resources/bl_warehouse/items-and-rewards) for the included defaults.
 
 ## Dispatch
 
@@ -107,4 +107,4 @@ The robbery continues normally when `daybreak-police` is not running. Supporting
 
 ## Debugging
 
-BL Warehouse 1.1.0 does not define a debug toggle in its current configuration files. Use the server console, F8 console, and temporary development values for testing. Restart `bl-warehouse` after every configuration change and restore production values when verification is complete.
+BL Warehouse 1.2.0 does not define a debug toggle in its current configuration files. Use the server console, F8 console, and temporary development values for testing. Restart `bl_warehouse` after every configuration change and restore production values when verification is complete.
