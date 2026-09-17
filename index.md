@@ -24,6 +24,7 @@ icon: "house"
 ## Popular Resources
 
 <CardGroup cols="2">
+  <Card title="BL Lawn Mowing" icon="truck" href="/resources/bl_lawnmowing/overview">Landscaping job with customer lawns, equipment transport, and persistent progression.</Card>
   <Card title="BL Warehouse" icon="warehouse" href="/resources/bl_warehouse/overview">Warehouse robbery system for FiveM.</Card>
 </CardGroup>
 

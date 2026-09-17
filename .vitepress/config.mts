@@ -47,6 +47,16 @@ export default defineConfig({
         collapsed: false,
         items: [
           {
+            text: 'BL Lawn Mowing',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/resources/bl_lawnmowing/overview' },
+              { text: 'Installation', link: '/resources/bl_lawnmowing/installation' },
+              { text: 'Configuration', link: '/resources/bl_lawnmowing/configuration' },
+              { text: 'Troubleshooting', link: '/resources/bl_lawnmowing/troubleshooting' }
+            ]
+          },
+          {
             text: 'BL Warehouse',
             collapsed: false,
             items: [
