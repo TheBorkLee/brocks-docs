@@ -22,6 +22,8 @@ brocks-docs/
 ├── developers/                        # Exports, events, and integration guides
 ├── getting-started/                   # General onboarding guides
 ├── resources/
+│   ├── bl_lawnmowing/                 # BL Lawn Mowing documentation section
+│   ├── bl_trucking/                   # BL Trucking documentation section
 │   └── bl_warehouse/                  # Complete BL Warehouse documentation section
 ├── support/                            # Common issues, support, and FAQ
 ├── index.md                            # Homepage

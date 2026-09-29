@@ -25,6 +25,7 @@ icon: "house"
 
 <CardGroup cols="2">
   <Card title="BL Lawn Mowing" icon="truck" href="/resources/bl_lawnmowing/overview">Landscaping job with customer lawns, equipment transport, and persistent progression.</Card>
+  <Card title="BL Trucking" icon="truck" href="/resources/bl_trucking/overview">Contract trucking with a shared job board, forklift unloading, reputation, and truck ownership.</Card>
   <Card title="BL Warehouse" icon="warehouse" href="/resources/bl_warehouse/overview">Warehouse robbery system for FiveM.</Card>
 </CardGroup>
 

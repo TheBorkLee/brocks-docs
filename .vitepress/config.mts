@@ -57,6 +57,17 @@ export default defineConfig({
             ]
           },
           {
+            text: 'BL Trucking',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/resources/bl_trucking/overview' },
+              { text: 'Installation', link: '/resources/bl_trucking/installation' },
+              { text: 'Admin Setup', link: '/resources/bl_trucking/admin-setup' },
+              { text: 'Configuration', link: '/resources/bl_trucking/configuration' },
+              { text: 'Troubleshooting', link: '/resources/bl_trucking/troubleshooting' }
+            ]
+          },
+          {
             text: 'BL Warehouse',
             collapsed: false,
             items: [
